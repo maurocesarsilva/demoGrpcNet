@@ -14,7 +14,7 @@ namespace ClientGrpc
 
 		public async Task HelloWord(string name)
 		{
-			_client.HelloWord(new HelloRequest { Name = name ?? "Hello word" });
+			var result = _client.HelloWord(new HelloRequest { Name = name ?? "Hello word" });
 
 		}
 	}

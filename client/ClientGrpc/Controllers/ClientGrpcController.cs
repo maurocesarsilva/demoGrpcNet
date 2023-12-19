@@ -14,9 +14,9 @@ namespace ClientGrpc.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> Get([FromQuery] string name)
+		public async Task<IActionResult> Get([FromQuery] string? name)
 		{
-			return Ok(_clientGrpcService.HelloWord(name))
+			return Ok(_clientGrpcService.HelloWord(name));
 ;		}
 	}
 }

@@ -13,14 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ClientGrpcService>();
 builder.Services.AddGrpcClient<ServidorService.ServidorServiceClient>(options =>
 {
-	options.Address = new Uri("https://localhost:7224");
+	options.Address = new Uri("http://localhost:5267");
 })
-	.AddInterceptor<ClientGrpcService>()
-	.ConfigureHttpMessageHandlerBuilder(b =>
-	{
-		b.PrimaryHandler =
-			new HttpClientHandler { ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator };
-	});
+	.AddInterceptor<ClientGrpcService>();
 
 var app = builder.Build();
 
