@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Grpc",
+    "Projects": [
+      {
+        "Name": "..\\..\\client\\ClientGrpc\\ClientGrpc.csproj",
+        "Action": "StartWithoutDebugging",
+        "DebugTarget": "https"
+      },
+      {
+        "Name": "ServidorGrpc.csproj",
+        "Action": "StartWithoutDebugging",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]
