@@ -11,11 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<ClientGrpcService>();
-builder.Services.AddGrpcClient<ServidorService.ServidorServiceClient>(options =>
-{
-	options.Address = new Uri("http://localhost:5267");
-})
-	.AddInterceptor<ClientGrpcService>();
+builder.Services.AddGrpcClient<ServidorService.ServidorServiceClient>(
+			   options => options.Address = new Uri("https://localhost:7224"));
+
 
 var app = builder.Build();
 

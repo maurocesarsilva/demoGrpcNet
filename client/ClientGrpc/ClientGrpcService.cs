@@ -1,9 +1,8 @@
 ﻿using ClientGrpc.Protos;
-using Grpc.Core.Interceptors;
 
 namespace ClientGrpc
 {
-	public class ClientGrpcService : Interceptor
+	public class ClientGrpcService
 	{
 		private readonly ServidorService.ServidorServiceClient _client;
 
